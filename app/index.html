@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI, all 55 PS5 trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5 · offline guide &amp; tracker</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every one of the 55 trophies — official names, descriptions and grades, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that remembers your progress. No network needed: the whole guide lives in this folder.</p>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-numbers"><strong id="progressCount">0 / 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+    <ul class="grade-counts" id="gradeCounts"></ul>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Tracker controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission, place…" autocomplete="off"></label>
+  <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+  <label class="grade">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="spoiler"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+  <button id="reset" type="button">Reset</button>
+</nav>
+<p class="status" id="status" role="status"></p>
+
+<main>
+  <h2 id="listHeading">All 55 trophies</h2>
+  <p class="list-note">Tick a trophy when you earn it — your progress is saved in this browser. Story trophies stay hidden while “Hide story spoilers” is on, until you earn them.</p>
+  <div class="trophy-list" id="trophyList"></div>
+  <p class="empty" id="emptyState" hidden></p>
+</main>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Road to the Platinum</h2>
+  <p class="roadmap-intro">About 200 hours, difficulty 4 out of 10, one playthrough — no mission replay, free-roam after the story. The platinum pops the moment the other 54 are yours.</p>
+  <div class="stages" id="stages"></div>
+  <aside class="warnings">
+    <h3>Before you start</h3>
+    <ul>
+      <li><strong>One possibly-missable trophy:</strong> Positive Mental Attitude. Meditate with Lucia at Jason's house in Chapter 1, before that chapter ends — it is still unconfirmed whether the trophy needs that one, so don't skip it.</li>
+      <li><strong>Cheats disable trophies</strong> and saving. Leave them off for the whole run.</li>
+      <li><strong>Keep chapter saves.</strong> There is no mission replay, so hold a manual save at the start and end of each chapter.</li>
+      <li><strong>Nothing else is missable.</strong> Every quest giver is still around in free-roam after the story, and optional missions that expire never count toward a trophy.</li>
+    </ul>
+  </aside>
+</section>
+
+<footer>
+  <h2>Sources</h2>
+  <p>Official trophy names, descriptions and grades are as PlayStation publishes them, taken from the lists at Exophase and PSNProfiles (cross-checked on PlanetGTA6). Every guide above is written in our own words for this guide; the facts in it are cited beside each trophy. The main sources used were:</p>
+  <ul>
+    <li>PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</li>
+    <li>Push Square — GTA 6 Trophy Guide &amp; Roadmap</li>
+    <li>Sixshore — GTA 6 Trophy and Achievement List</li>
+    <li>Vice City Hustle — GTA 6 Trophy List</li>
+    <li>PlanetGTA6 — GTA 6 Trophies (official list via Exophase / PSNProfiles)</li>
+  </ul>
+  <p class="fineprint">An original fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or game screenshots are used anywhere in this guide.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
