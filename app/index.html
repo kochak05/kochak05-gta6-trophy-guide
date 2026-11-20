@@ -3,84 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonida Trophy Guide — GTA VI (PS5)</title>
-<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<title>Leonida Trophy Guide — GTA 6 PS5 Trophy Tracker</title>
 <link rel="stylesheet" href="style.css">
-<script src="app.js" defer></script>
 </head>
 <body>
 <header class="masthead">
-  <div class="masthead-inner">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true">VI</span>
-      <div>
-        <h1>Leonida Trophy Guide</h1>
-        <p class="subtitle">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; works fully offline</p>
-      </div>
-    </div>
-    <div class="progress-wrap" id="progress-wrap">
-      <div class="progress-line"><span id="progress-text">0 of 55 earned</span><span id="progress-pct">0%</span></div>
-      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-      <p class="progress-sub" id="progress-sub">Platinum: Vice Got a Price! — earn every other trophy.</p>
-    </div>
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every one of the 55 official trophies — a checklist you can tick off, a guide for each one in plain words with its sources, a roadmap to the platinum, and the one trophy you can miss flagged up front. Works fully offline; progress is saved in this browser.</p>
+  <div class="progress" id="progress" aria-live="polite">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-text" id="progressText">0 of 55 earned &middot; 0%</p>
   </div>
 </header>
 
 <main>
-  <section class="roadmap" id="roadmap" aria-labelledby="roadmap-title">
-    <h2 id="roadmap-title">Road to the Platinum</h2>
-    <p class="roadmap-intro">Four stages, in order — the only missable trophy is flagged in Stage 1; the rest can be cleaned up in free roam.</p>
-    <div class="stages" id="stages"></div>
-    <div class="missable-banner" id="missable-banner">
-      <strong>&#9888; Missable — read this first:</strong>
-      <span id="missable-text"></span>
-    </div>
+  <section class="banner" id="missableBanner" aria-label="Missable trophy warning">
+    <h2>&#9888; The one trophy you can miss</h2>
+    <p><strong>Positive Mental Attitude</strong> — meditate at all 18 Meditation Spots. After an early Chapter 1 mission, Lucia mentions meditation in the kitchen at Jason&rsquo;s house one morning and heads out to the balcony. Follow her and accept the prompt. The balcony is not marked as a Meditation Spot like the others, and guide writers have not confirmed whether the trophy needs it — but you cannot do it again after Chapter 1, so do it. Nothing else in the list can be missed.</p>
+    <p class="banner-source">Source: GameMapa, drawing on PowerPyx.</p>
   </section>
 
-  <section class="tracker" aria-labelledby="tracker-title">
-    <h2 id="tracker-title">Trophy tracker</h2>
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">PowerPyx rates the platinum 4 out of 10 and about 200 hours in a single playthrough. There is no mission replay, so keep a save at the start and end of every chapter — the game gives you 15 manual slots. Cheats disable trophies and saving, so keep them off your platinum save.</p>
+    <ol class="stages">
+      <li>
+        <h3>Stage 1 &mdash; Story, Chapters 1&ndash;5 <span class="stage-time">60&ndash;80 hours</span></h3>
+        <p>Play the story and pick up optional missions as they appear. Do the Chapter 1 balcony meditation the morning Lucia offers it. Scan every new vehicle with the WAiNK app and study animals through your binoculars as you go: 100% needs 200 of the 277 vehicle models and 100 of the 255 animals. Everything you do before the ending already counts toward the checklist.</p>
+      </li>
+      <li>
+        <h3>Stage 2 &mdash; Strangers &amp; Freaks <span class="stage-time">about 10 hours</span></h3>
+        <p>Finish the stranger strands — Andy, Kenton, Billy, Randy, Tyrone and Bret — eight strands in all for the silver. The 100% checklist does not ask for these quests, so they are usually what is left after the story, together with any stray trophies that did not pop on their own.</p>
+      </li>
+      <li>
+        <h3>Stage 3 &mdash; The 100% checklist <span class="stage-time">about 100 hours</span></h3>
+        <p>After the ending, Progress, then Stats, gains a 100% Completion entry. You need every robbery, underwater discovery, shooting range, drone race and Bret quest. Only 70 of the 80 Challenges are needed, so skip the nastiest ones. Most side quests are not required, and collectibles only partly.</p>
+      </li>
+      <li>
+        <h3>Stage 4 &mdash; Cleanup and the platinum <span class="stage-time">a few hours</span></h3>
+        <p>Mop up what is left: 250 of the 397 stunts, 3 of the 18 card sets, 100 WAiNK scans, 50 of the 80 Challenges. When the checklist hits 100%, A Long Road pops, and with it the platinum, Vice Got a Price!</p>
+      </li>
+    </ol>
+    <p class="roadmap-source">Roadmap sources: GameMapa, drawing on PowerPyx; trophy list as published by Insider Gaming.</p>
+  </section>
 
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="Search trophies, guides, sources…" aria-label="Search trophies">
-      <div class="filters" id="filters" role="group" aria-label="Filter by kind">
-        <button type="button" data-kind="all" class="active">All 55</button>
-        <button type="button" data-kind="story">Story</button>
-        <button type="button" data-kind="missable">Missable</button>
-        <button type="button" data-kind="collectibles">Collectibles</button>
-        <button type="button" data-kind="activities">Activities</button>
-        <button type="button" data-kind="online">Online</button>
-        <button type="button" data-kind="other">Other</button>
-        <button type="button" data-kind="earned">Earned</button>
-        <button type="button" data-kind="todo">Not earned</button>
+  <section class="tracker" id="tracker" aria-label="Trophy tracker">
+    <h2>Trophy checklist</h2>
+    <div class="controls">
+      <label class="search">Search
+        <input type="search" id="search" placeholder="Search trophies, guides, sources&hellip;" autocomplete="off">
+      </label>
+      <div class="filters" id="filters" role="group" aria-label="Filter trophies">
+        <button type="button" data-filter="all" class="active">All 55</button>
+        <button type="button" data-filter="story">Story</button>
+        <button type="button" data-filter="missable">Missable</button>
+        <button type="button" data-filter="collectibles">Collectibles</button>
+        <button type="button" data-filter="activities">Activities</button>
+        <button type="button" data-filter="online">Online</button>
+        <button type="button" data-filter="earned">Earned</button>
+        <button type="button" data-filter="todo">To do</button>
       </div>
-      <label class="toggle"><input type="checkbox" id="spoilers"> Hide story spoilers until earned</label>
+      <label class="spoiler-toggle"><input type="checkbox" id="spoilerToggle"> Hide story spoilers until earned</label>
+      <div class="data-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <button type="button" id="importBtn">Import progress</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
     </div>
-
-    <div class="actions">
-      <button type="button" id="export-btn">Export progress</button>
-      <button type="button" id="import-btn">Import progress</button>
-      <input type="file" id="import-file" accept="application/json,.json" hidden>
-      <button type="button" id="reset-btn" class="danger">Reset progress</button>
-      <span class="count" id="count"></span>
-    </div>
-
-    <ul class="trophy-list" id="trophy-list"></ul>
-    <p class="empty" id="empty" hidden>No trophies match this filter.</p>
+    <p class="filter-note" id="filterNote"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
   </section>
 
-  <section class="notes" aria-labelledby="notes-title">
-    <h2 id="notes-title">How this guide is built</h2>
-    <ul>
-      <li>Names and descriptions are shown exactly as PlayStation publishes them; every guide is written in our own words and names its sources beside it.</li>
-      <li>Sources: Exophase and PSNProfiles for the official list; KeenGamer, Insider Gaming, GameMapa and EGamers.io for requirements, the 100% checklist and the missable warning. Five hidden trophies are still unconfirmed by the community — their guides say so plainly instead of guessing.</li>
-      <li>Progress is saved in your browser (localStorage) and never leaves your device. Export writes a JSON file; import reads one back.</li>
-      <li>Nothing here is Rockstar Games artwork, logo or box art. The look is our own.</li>
-    </ul>
+  <section class="detail" id="detail" aria-label="Trophy guide" hidden>
+    <h2 id="detailName"></h2>
+    <p class="detail-meta" id="detailMeta"></p>
+    <p class="detail-desc" id="detailDesc"></p>
+    <p class="detail-missable" id="detailMissable" hidden>&#9888; Missable — see the warning at the top of the page.</p>
+    <h3>Guide</h3>
+    <p class="detail-guide" id="detailGuide"></p>
+    <p class="detail-sources" id="detailSources"></p>
+    <button type="button" id="detailClose">Close guide</button>
   </section>
 </main>
 
 <footer>
-  <p>Leonida Trophy Guide — an offline, open guide for GTA VI on PS5. Not affiliated with Rockstar Games, Sony Interactive Entertainment, or any guide site it cites.</p>
+  <p>Trophy names and descriptions are as PlayStation publishes them (Insider Gaming's full list, 28 hidden). Guides are written in the author's own words and cite their sources beside each trophy. Sources consulted: Insider Gaming, GameMapa, PowerPyx, GamesRadar+. No online trophies exist in this list. This guide is unofficial, works offline, and shows no Rockstar Games logo or artwork.</p>
 </footer>
+
+<script src="app.js"></script>
 </body>
 </html>
